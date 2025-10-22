@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,26 @@
             <h1>Bem vindo à Placeholder</h1>
         </div>
     </header> 
+    
     <div>
         <input id="searchInput" placeholder="Buscar produtos..." />
     </div>
+    
     <div>
-        <button>Login</button>
-        <button>Cadastro</button>
-        <button>Carrinho</button>
+        <button id="Login">Login</button>
+        <button id="Cadastro">Cadastro</button>
+        <button id="Carrinho">Carrinho</button>
     </div>
+
+    <main>
+        <section class="produtos">
+            <div class="produto">
+                <img src="https://i0.wp.com/texasimports.com.br/wp-content/uploads/2017/05/CANECA-MAGICA-VERMELHA.jpg?fit=500%2C473&ssl=1" class="produto-imagem">
+                <h2 class="produto-nome">Caneca de cerâmica vermelha</h2>
+                <p class="produto-preco">R$ 10,99</p>
+                <p class="produto-vendedor">Loja de Cerâmica</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
