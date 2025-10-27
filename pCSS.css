@@ -1,5 +1,17 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
-    border: 10px solid darkgreen;
+}
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    
+    background-color: rgb(245, 245, 0);
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    margin: -7.6px;
+    padding: 10px;
 }
