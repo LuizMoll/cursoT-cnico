@@ -2,9 +2,13 @@ body {
     font-family: sans-serif;
     font-size: 16px;
 }
+
+
 :root {
     background-color: lightgray;
 }
+
+
 header {
     position: fixed;
     top: 0px;
@@ -24,6 +28,7 @@ header {
     padding: 10px 20px 10px 20px;
 }
 
+
 h1 {
     position: absolute;
     top: 0%;
@@ -31,6 +36,7 @@ h1 {
     transform: translate(1%, -0%);
     color: yellow;
 }
+
 
 input#searchInput {
     position: absolute;
@@ -44,6 +50,7 @@ input#searchInput {
     border-width: 1px;
 }
 
+
 div#botoesHeader {
     display: flex;
     flex-wrap: nowrap;
@@ -54,14 +61,26 @@ div#botoesHeader {
     transform: translate(-95%, -50%);
 }
 
+
+div button {
+    inline-size:80px;
+    block-size:35px;
+
+    background-color: #0000AA;
+    color: #FFFFFF;
+}
+
+
 main {
     margin-block-start: 130px;
     margin-inline-start: 40px;
 }
 
+
 div.produto {
-    inline-size: 300px;
-    block-size: 300px;
+    inline-size: 350px;
+    block-size: 350px;
+    margin: 10px;
     padding: 10px;
 
     display: flex;
@@ -76,4 +95,51 @@ div.produto {
     border-width: 1px;
 
     text-align: center;
+}
+
+
+img.produtoImagem {
+    margin-inline: 20px;
+    margin-block: 20px;
+}
+
+
+h2.produtoNome {
+    margin-block: 8px;
+
+    font-size: 1.8rem;
+    color: #0000AA
+}
+
+
+p.produtoPreco {
+    margin-block: 8px;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00AA00;
+}
+
+
+p.produtoVendedor {
+    margin-block: 8px;
+
+    font-size: 0.9rem;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    inline-size: 100%;
+
+    background-color: #0000AA;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    
+    font-size: 0.7rem;
+    text-align: center;
+    color: white;
 }
