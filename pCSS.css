@@ -33,7 +33,7 @@ h1 {
     position: absolute;
     top: 0%;
     left: 1%;
-    transform: translate(1%, -0%);
+    transform: translate(-1%, -0%);
     color: yellow;
 }
 
@@ -44,6 +44,7 @@ input#searchInput {
     left: 50%;
     transform: translate(-50%, -50%);
 
+    inline-size: 300px;
     background-color: white;
     border-color: black;
     border-style: solid;
@@ -74,18 +75,34 @@ div button {
 main {
     margin-block-start: 130px;
     margin-inline-start: 40px;
+    margin-block-end: 22px;
+    margin-inline-end: 40px;
+
+    /* removed flex layout from main — the section.produtos will handle card flow */
 }
 
 
+/* make the product list a horizontal wrapping row */
+section.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/* each product remains a vertical column */
 div.produto {
-    inline-size: 350px;
-    block-size: 350px;
+    box-sizing: border-box;
+    flex: 0 1 350px;   /* base width, can shrink */
+    width: 350px;      /* use width for broader support */
+    height: 350px;
     margin: 10px;
     padding: 10px;
 
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: column; /* stack children vertically inside the card */
     justify-content: center;
     align-items: center;
 
@@ -93,14 +110,15 @@ div.produto {
     border-color: black;
     border-style: solid;
     border-width: 1px;
+    box-shadow: 2px 2px 5px gray;
 
     text-align: center;
 }
 
 
 img.produtoImagem {
-    margin-inline: 20px;
-    margin-block: 20px;
+    margin-inline: 10px;
+    margin-block: 10px;
 }
 
 
@@ -125,6 +143,16 @@ p.produtoVendedor {
     margin-block: 8px;
 
     font-size: 0.9rem;
+    color: #444444;
+}
+
+
+div.produtoBotoes {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 
@@ -138,6 +166,7 @@ footer {
     border-color: black;
     border-style: solid;
     border-width: 1px;
+    padding: 0px;
     
     font-size: 0.7rem;
     text-align: center;
