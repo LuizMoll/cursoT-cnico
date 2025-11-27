@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pCSS.css">
     <title>Página Fictícia</title>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA9kP6mUgMChBeZdgiT8UGltzmOk8rDseE",
+    authDomain: "projeto-criacao-web.firebaseapp.com",
+    projectId: "projeto-criacao-web",
+    storageBucket: "projeto-criacao-web.firebasestorage.app",
+    messagingSenderId: "875231809679",
+    appId: "1:875231809679:web:da6746f7dde4ce169ee0fa",
+    measurementId: "G-N0G9R5G34S"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+    </script>
 </head>
 <body>
     <header>
@@ -21,6 +44,7 @@
             <button id="botaoCarrinho" class="ghostOposto">Carrinho</button>
             <button id="botaoLogin" class="ghost">Login</button>
             <button id="botaoCadastro" class="ghost">Cadastro</button>
+            <button id="botaoLogout" class="ghost">Logout</button>
         </div>
     </header> 
 
@@ -31,19 +55,21 @@
                 <h2 class="produtoNome">Caneca de cerâmica vermelha</h2>
                 <p class="produtoPreco">R$ 10,99</p>
                 <p class="produtoVendedor">Loja de Cerâmica</p>
+                <p class="produtoEstoque">4 em estoque</p>
                 <div class="produtoBotoes">
-                    <button class="produtoBotaoAdicionar">Adicionar ao Carrinho</button>
+                    <button class="produtoBotaoAdicionar">Adicionar Carrinho</button>
                     <button class="produtoBotaoComprar">Comprar</button>
                 </div>
             </div>
 
             <div class="produto">
-                <img width="100" height="100" src="https://i0.wp.com/texasimports.com.br/wp-content/uploads/2017/05/CANECA-MAGICA-VERMELHA.jpg?fit=500%2C473&ssl=1" class="produtoImagem">
-                <h2 class="produtoNome">Caneca de cerâmica vermelha</h2>
-                <p class="produtoPreco">R$ 10,99</p>
-                <p class="produtoVendedor">Loja de Cerâmica</p>
+                <img width="100" height="100" src="https://m.media-amazon.com/images/I/51KMem4CdUL._AC_SY300_SX300_QL70_ML2_.jpg">
+                <h2 class="produtoNome">Headphone bluetooth</h2>
+                <p class="produtoPreco">R$ 99,99</p>
+                <p class="produtoVendedor">Eletrônicos Belanu</p>
+                <p class="produtoEstoque">6 em estoque</p>
                 <div class="produtoBotoes">
-                    <button class="produtoBotaoAdicionar">Adicionar ao Carrinho</button>
+                    <button class="produtoBotaoAdicionar">Adicionar Carrinho</button>
                     <button class="produtoBotaoComprar">Comprar</button>
                 </div>
             </div>
@@ -53,5 +79,6 @@
     <footer>
         <p>Website meramente fictício</p>
     </footer>
+    <script src="pJS.js"></script>
 </body>
 </html>
